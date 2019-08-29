@@ -28,7 +28,7 @@ const Header = () => (
     `}
   >
     <NavLink to="/" fontWeight="bold">
-      Web Development Articles
+      Blog Posts
     </NavLink>
     <nav
       css={css`
