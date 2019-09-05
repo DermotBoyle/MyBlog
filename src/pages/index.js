@@ -4,6 +4,7 @@ import Hero from "../components/hero";
 import Layout from "../components/layout";
 import usePosts from "../components/hooks/use-posts";
 import PostPreview from "../components/post-preview";
+import Insta from "../components/insta";
 
 export default () => {
   const posts = usePosts();
@@ -11,10 +12,12 @@ export default () => {
     <>
       <Hero></Hero>
       <Layout>
-        <h1>Web Development - Education - Music - Lifestyle</h1>
+        <h1>Web Development - Education</h1>
         <p>
           Welcome to my blog, I built this to practice using Gatsby & GraphQL.
-          It will be about whatever comes to mind! &nbsp;
+          It will be about professional and personal growth! &nbsp;
+        </p>
+        <p>
           <strong>
             <Link to="/about/">Learn About Me&rarr;</Link>
           </strong>
@@ -23,6 +26,7 @@ export default () => {
         {posts.map(post => (
           <PostPreview key={post.slug} post={post}></PostPreview>
         ))}
+        <Insta></Insta>
       </Layout>
     </>
   );

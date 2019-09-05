@@ -1,19 +1,19 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import React from "react";
+import styled from "@emotion/styled";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
-const ImageBackground = styled('div')`
-  background-image: url('/images/madrid-skyline.jpg');
+const ImageBackground = styled(BackgroundImage)`
   background-position: top 40% center;
   background-size: cover;
-  height: 20vw;
+  height: 38vh;
 
   + * {
     margin-top: 0;
   }
 `;
 
-const TextBox = styled('div')`
+const TextBox = styled("div")`
   background-image: linear-gradient(to top, #ddbbffdd 2rem, #ddbbff00);
   display: flex;
   flex-direction: column;
@@ -40,8 +40,19 @@ const TextBox = styled('div')`
 `;
 
 const Hero = () => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "madrid-skyline.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
   return (
-    <ImageBackground>
+    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn={"soft"}>
       <TextBox>
         <h1>Dermot's Personal Blog</h1>
       </TextBox>

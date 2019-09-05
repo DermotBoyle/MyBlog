@@ -25,10 +25,9 @@ const PostTemplate = ({ data: { mdx: post } }) => (
         font-size: 0.75rem;
       `}
     >
-      Posted by (author)
+      Posted by Dermot Boyle
     </p>
     <MDXRenderer>{post.body}</MDXRenderer>
-    <p>Post Body Goes Here</p>
     <ReadLink to="/">&larr; back to all posts</ReadLink>
   </Layout>
 );
