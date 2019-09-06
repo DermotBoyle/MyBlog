@@ -62,30 +62,33 @@ const Header = () => (
         margin-bottom: 9px;
         color: #222;
       `}
+    ></NavLink>
+    <div
+      css={css`
+        width: 23rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0 !important;
+      `}
     >
-      <nav
-        css={css`
-          margin-top: 0;
-        `}
-      >
-        <NavLink to="/" activeClassName="current-page">
-          Home
-        </NavLink>
-        <NavLink to="/about/" activeClassName="current-page">
-          About
-        </NavLink>
-      </nav>
-      <a href="https://twitter.com/dermotboyle">
+      <NavLink to="/" activeClassName="current-page">
+        Home
+      </NavLink>
+      <NavLink to="/about/" activeClassName="current-page">
+        About
+      </NavLink>
+      <a href={`https://twitter.com/dermotboyle`}>
         <FontAwesomeIcon icon={faTwitter}>here</FontAwesomeIcon>
       </a>
-      <a href="https://linkedin.com/in/boyledermot">
+      <a href={`https://linkedin.com/in/boyledermot`}>
         <FontAwesomeIcon icon={faLinkedin}>here</FontAwesomeIcon>
       </a>
-      <a href="https://github.com/dermotboyle">
+      <a href={`https://github.com/dermotboyle`}>
         {" "}
         <FontAwesomeIcon icon={faGithub}>here</FontAwesomeIcon>
       </a>
-    </NavLink>
+    </div>
   </header>
 );
 
