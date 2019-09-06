@@ -75,9 +75,16 @@ const Header = () => (
           About
         </NavLink>
       </nav>
-      <FontAwesomeIcon icon={faTwitter}>here</FontAwesomeIcon>
-      <FontAwesomeIcon icon={faLinkedin}>here</FontAwesomeIcon>
-      <FontAwesomeIcon icon={faGithub}>here</FontAwesomeIcon>
+      <a href="https://twitter.com/dermotboyle">
+        <FontAwesomeIcon icon={faTwitter}>here</FontAwesomeIcon>
+      </a>
+      <a href="https://linkedin.com/in/boyledermot">
+        <FontAwesomeIcon icon={faLinkedin}>here</FontAwesomeIcon>
+      </a>
+      <a href="https://github.com/dermotboyle">
+        {" "}
+        <FontAwesomeIcon icon={faGithub}>here</FontAwesomeIcon>
+      </a>
     </NavLink>
   </header>
 );

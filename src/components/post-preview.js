@@ -28,6 +28,8 @@ const PostPreview = ({ post }) => (
           * {
             margin-top: 0;
             margin-bottom: 1rem;
+            min-width: 100px;
+            max-height: 100px;
           }
         `}
         alt={post.title}
@@ -38,6 +40,7 @@ const PostPreview = ({ post }) => (
         <Link to={post.slug}>{post.title}</Link>
       </h3>
       <p>{post.excerpt}</p>
+
       <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
     </div>
   </article>
