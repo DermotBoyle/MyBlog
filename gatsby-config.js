@@ -46,6 +46,12 @@ module.exports = {
         generateStatsFile: true,
         analyzerMode: "static"
       }
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
+      }
     }
   ]
 };
