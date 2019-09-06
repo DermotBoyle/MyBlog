@@ -10,7 +10,8 @@ const PostPreview = ({ post }) => (
       display: flex;
       border-bottom: 1px solid #ddd;
       margin-top: 1rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
+      align-items: centre;
     `}
   >
     {" "}
@@ -26,6 +27,7 @@ const PostPreview = ({ post }) => (
         css={css`
           * {
             margin-top: 0;
+            margin-bottom: 1rem;
           }
         `}
         alt={post.title}

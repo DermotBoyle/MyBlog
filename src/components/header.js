@@ -1,12 +1,21 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import { Link } from 'gatsby';
+import React from "react";
+import styled from "@emotion/styled";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faLinkedin,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
+import { css } from "@emotion/core";
+import { Link } from "gatsby";
+
+library.add(faTwitter, faLinkedin, faGithub);
 
 const NavLink = styled(Link)`
   color: #222;
   font-size: 1rem;
-  font-weight: ${props => props.fontWeight || 'normal'};
+  font-weight: ${props => props.fontWeight || "normal"};
   line-height: 1;
   margin: 0 0.5rem 0 0;
   padding: 0.25rem;
@@ -20,32 +29,56 @@ const NavLink = styled(Link)`
 const Header = () => (
   <header
     css={css`
-      background: #eee;
+      background: #e0d1f0;
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+      padding: 0 3rem;
     `}
   >
-    <NavLink to="/" fontWeight="bold">
-      Blog Posts
-    </NavLink>
-    <nav
+    <NavLink
+      to="/"
+      fontWeight="bold"
       css={css`
-        margin-top: 0;
+        color: rebeccapurple;
+        @import url("https://fonts.googleapis.com/css?family=Tangerine&display=swap");
+        display: flex;
+        align-items: center;
+        font-family: "tangerine", cursive;
+        font-size: 2rem;
+        font-weight: 800;
       `}
     >
-      <NavLink to="/" activeClassName="current-page">
-        Home
-      </NavLink>
-      <NavLink to="/about/" activeClassName="current-page">
-        About
-      </NavLink>
-      <NavLink to="/contact/" activeClassName="current-page">
-        Contact
-      </NavLink>
-    </nav>
+      Dermot's Blog
+    </NavLink>
+
     {}
+    <NavLink
+      css={css`
+        width: 23rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 9px;
+        color: #222;
+      `}
+    >
+      <nav
+        css={css`
+          margin-top: 0;
+        `}
+      >
+        <NavLink to="/" activeClassName="current-page">
+          Home
+        </NavLink>
+        <NavLink to="/about/" activeClassName="current-page">
+          About
+        </NavLink>
+      </nav>
+      <FontAwesomeIcon icon={faTwitter}>here</FontAwesomeIcon>
+      <FontAwesomeIcon icon={faLinkedin}>here</FontAwesomeIcon>
+      <FontAwesomeIcon icon={faGithub}>here</FontAwesomeIcon>
+    </NavLink>
   </header>
 );
 
