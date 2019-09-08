@@ -20,7 +20,7 @@ export default () => (
         I am a JavaScript developer currently living in Madrid. Outside of
         development I am a keen musician and love nothing more than writing new
         songs and discovering new music from other artists. Currently, I am
-        seeking oppotunities as a developer, I am open to relocation or working
+        seeking opportunities as a developer, I am open to relocation or working
         remotely. To see examples of my work you can visit my website{" "}
         <a href="https://dermotboyle.github.io">here</a>
       </p>
