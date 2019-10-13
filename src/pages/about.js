@@ -22,7 +22,7 @@ export default () => (
         songs and discovering new music from other artists. Currently, I am
         seeking opportunities as a developer, I am open to relocation or working
         remotely. To see examples of my work you can visit my website{" "}
-        <a href="https://dermotboyle.netlify.com/">here</a>
+        <a href="https://dermotboyle.netlify.com/ ">here</a>
       </p>
       <Link
         css={css`

@@ -11,11 +11,7 @@ const usePosts = () => {
             author
             image {
               sharp: childImageSharp {
-                fluid(
-                  maxWidth: 100
-                  maxHeight: 100
-                  duotone: { shadow: "#663399", highlight: "#ddbbff" }
-                ) {
+                fluid(maxWidth: 400, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

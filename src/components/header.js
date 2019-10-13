@@ -29,18 +29,17 @@ const NavLink = styled(Link)`
 const Header = () => (
   <header
     css={css`
-      background: #e0d1f0;
+      background: darkcyan;
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
-      padding: 0 3rem;
+      padding: 10px 3rem;
     `}
   >
     <NavLink
       to="/"
       fontWeight="bold"
       css={css`
-        color: rebeccapurple;
         @import url("https://fonts.googleapis.com/css?family=Tangerine&display=swap");
         display: flex;
         align-items: center;
@@ -48,9 +47,7 @@ const Header = () => (
         font-size: 2rem;
         font-weight: 800;
       `}
-    >
-      Dermot's Blog
-    </NavLink>
+    ></NavLink>
 
     {}
     <NavLink
@@ -78,15 +75,30 @@ const Header = () => (
       <NavLink to="/about/" activeClassName="current-page">
         About
       </NavLink>
-      <a href={`https://twitter.com/dermotboyle`}>
-        <FontAwesomeIcon icon={faTwitter}>here</FontAwesomeIcon>
+      <a
+        href={`https://twitter.com/dermotboyle`}
+        style={{ color: "aliceblue", margin: "0" }}
+      >
+        <FontAwesomeIcon icon={faTwitter} style={{ color: "aliceblue" }}>
+          here
+        </FontAwesomeIcon>
       </a>
-      <a href={`https://linkedin.com/in/boyledermot`}>
-        <FontAwesomeIcon icon={faLinkedin}>here</FontAwesomeIcon>
+      <a
+        href={`https://linkedin.com/in/boyledermot`}
+        style={{ color: "aliceblue", margin: "0" }}
+      >
+        <FontAwesomeIcon icon={faLinkedin} style={{ color: "aliceblue" }}>
+          here
+        </FontAwesomeIcon>
       </a>
-      <a href={`https://github.com/dermotboyle`}>
+      <a
+        href={`https://github.com/dermotboyle`}
+        style={{ color: "aliceblue", margin: "0" }}
+      >
         {" "}
-        <FontAwesomeIcon icon={faGithub}>here</FontAwesomeIcon>
+        <FontAwesomeIcon icon={faGithub} style={{ color: "aliceblue" }}>
+          here
+        </FontAwesomeIcon>
       </a>
     </div>
   </header>
