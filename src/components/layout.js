@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/core';
 import Header from './header';
 import Helmet from 'react-helmet';
 import useSiteMetadata from '../components/use-sitemetadata';
+import "./layouts.scss"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -59,12 +60,7 @@ const Layout = ({ children }) => {
         <meta name="description" content={description} />
       </Helmet>
       <Header />
-      <main
-        css={css`
-          margin: 2rem auto 4rem;
-          max-width: 90vw;
-          width: 550px;
-        `}
+      <main     
       >
         {children}
       </main>

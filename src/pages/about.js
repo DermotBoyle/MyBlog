@@ -1,37 +1,52 @@
 import React from "react";
-import portrait from "../pages/images/portrait.jpg";
+import portrait from "../pages/images/dermot.jpg";
 import { Link } from "gatsby";
 import { css } from "@emotion/core";
 import Layout from "../components/layout";
+import "../components/layouts.scss"
 
 export default () => (
   <>
     <Layout>
-      <h1>About Me</h1>
+      <div class="about-container">
+      <h1 class="about-me"
+      css={css `
+        text-decoration-line: underline;
+        text-decoration-style: double;
+        text-underline-offset: .2em
+      `}
+      >About Me</h1>
       <img
-        css={css`
-          display: flex;
-          justify-content: center;
-          height: 30vh;
-        `}
+        className="portrait"        
         src={portrait}
+        style={{width: '25%', borderRadius: '100px', alignItems: 'center'}}
+        css={css`
+      
+        `}
       ></img>
-      <p>
-        I am a JavaScript developer currently living in Madrid. Outside of
-        development I am a keen musician and love nothing more than writing new
-        songs and discovering new music from other artists. Currently, I am
-        seeking opportunities as a developer, I am open to relocation or working
-        remotely. To see examples of my work you can visit my website{" "}
-        <a href="https://dermotboyle.netlify.com/ ">here</a>
+      <p style={{width: '30%'}}
+      css={css`
+      margin-left: 1em;
+      margin-bottom: 2em;
+      `}
+      >
+        Hey, thanks for visiting my page ! 
+        I use this page to post things that I have been learning recently.
+        At the moment I am working as a frontend developer for Arbor Fintech.
+        My work mostly revolves around coding for our great mobile app in Madrid, Spain.
+        If you are interested in seeing other projects I have been working on, you can find my portfolio site &nbsp;
+        <a href="https://dermotboyle.netlify.com/">here</a> :)
       </p>
       <Link
         css={css`
           margin-top: 0.5rem;
+          margin-left: 3em;
         `}
         to="/"
       >
         &larr; back to home
       </Link>
+      </div>
     </Layout>
   </>
 );

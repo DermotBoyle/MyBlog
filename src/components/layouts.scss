@@ -1,0 +1,94 @@
+.header {
+    display: inline-flex;
+    background-color: skyblue;
+    width: 100%;
+    padding: 2%;
+
+    .nav-container {
+        width: 60%;
+        justify-content: end;
+    }
+
+    .social-media-container {
+        width: 40%;
+        display: contents;
+    }
+}
+
+
+
+main {
+
+    padding: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+
+        .blog-post {
+            width: 100% !important;
+        }
+    }
+
+    .learn-about {
+        text-align: right;
+    }
+
+    .blog-post {
+        display: flex;
+        margin: 2em auto 4em;
+        background-color: red($color: #000000);
+        width: 35%;
+    }
+
+    .latest-posts {
+        text-align: center;
+    }
+
+
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @media screen and (max-width: 984px) {
+            .portrait {
+                width: 50% !important;
+            }
+
+            p {
+                width: 75%;
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+
+        }
+
+
+    }
+
+
+
+
+}
+
+
+
+
+// vars
+$color: #fff; // icon color
+$blue: #158fef; // background color
+$animation: 0.6s; // animation speed
+$scale: 1; // icon scale 68/68 default
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

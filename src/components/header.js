@@ -27,54 +27,34 @@ const NavLink = styled(Link)`
 `;
 
 const Header = () => (
-  <header
-    css={css`
-      background: darkcyan;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 3rem;
-    `}
+  <header  
+    className="header"
   >
-    <NavLink
-      to="/"
-      fontWeight="bold"
-      css={css`
-        @import url("https://fonts.googleapis.com/css?family=Tangerine&display=swap");
-        display: flex;
-        align-items: center;
-        font-family: "tangerine", cursive;
-        font-size: 2rem;
-        font-weight: 800;
-      `}
-    ></NavLink>
-
-    {}
-    <NavLink
-      css={css`
-        width: 23rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 9px;
-        color: #222;
-      `}
-    ></NavLink>
+    
+   
     <div
       css={css`
-        width: 23rem;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 0 !important;
       `}
     >
-      <NavLink to="/" activeClassName="current-page">
+      <div className="nav-container">
+      <NavLink to="/" activeClassName="current-page pages">
         Home
       </NavLink>
-      <NavLink to="/about/" activeClassName="current-page">
+      <NavLink to="/about/" activeClassName="current-page pages"
+      css={css `
+      margin-left: 7%;
+      `}
+      
+      >
         About
       </NavLink>
+      </div>
+      <div className="social-media-container">
       <a
         href={`https://twitter.com/dermotboyle`}
         style={{ color: "aliceblue", margin: "0" }}
@@ -100,6 +80,7 @@ const Header = () => (
           here
         </FontAwesomeIcon>
       </a>
+      </div>     
     </div>
   </header>
 );

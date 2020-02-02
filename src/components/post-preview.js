@@ -5,13 +5,15 @@ import Image from "gatsby-image";
 import ReadLink from "./read-link";
 
 const PostPreview = ({ post }) => (
-  <article
+  <article className="blog-post"
     css={css`
       display: flex;
       border-bottom: 1px solid #ddd;
       margin-top: 1rem;
       margin-bottom: 0.5rem;
       align-items: centre;
+      margin-left: 30%;
+      margin-right: 30%;
     `}
   >
     {" "}

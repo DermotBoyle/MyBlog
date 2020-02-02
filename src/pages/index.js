@@ -9,13 +9,9 @@ export default () => {
   return (
     <>
       <Layout>
-        <p>
-          <strong>
-            <Link to="/about/">Learn About Me&rarr;</Link>
-          </strong>
-        </p>
-        <h2> Read my blog </h2>
-        {posts.map(post => (
+      
+        <h2 className="latest-posts"> Latest posts... </h2>
+        {posts.reverse().map(post => (
           <PostPreview key={post.slug} post={post}></PostPreview>
         ))}
       </Layout>
